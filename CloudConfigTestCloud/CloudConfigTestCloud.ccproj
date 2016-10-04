@@ -40,9 +40,6 @@
     <Folder Include="CloudConfigTestContent" />
   </ItemGroup>
   <ItemGroup>
-    <DiagnosticsConfiguration Include="CloudConfigTestContent\diagnostics.wadcfgx" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\CloudConfigTest\CloudConfigTest.csproj">
       <Name>CloudConfigTest</Name>
       <Project>{8d94dc00-f84d-455c-934d-fc8ea1bb77ec}</Project>

@@ -1,4 +1,5 @@
-﻿using Microsoft.WindowsAzure;
+﻿using Microsoft.Azure;
+using NLog.Common;
 using NLog.Config;
 using NLog.LayoutRenderers;
 using System.Text;
@@ -28,22 +29,26 @@ namespace NLog.WindowsAzure.Configuration
         /// <param name="logEvent">Logging event.</param>
         protected override void Append(StringBuilder builder, LogEventInfo logEvent)
         {
+            InternalLogger.Debug("cloudconfig");
+
             if (Name == null)
             {
+                InternalLogger.Debug("No name!");
                 return;
             }
-            
-            string value = CloudConfigurationManager.GetSetting(Name);
+
+            var value = CloudConfigurationManager.GetSetting(Name);
             if (value == null && Default != null)
             {
+                InternalLogger.Debug("Setting value to default " + Default);
                 value = Default;
             }
 
             if (string.IsNullOrEmpty(value))
             {
+                InternalLogger.Debug("No value for " + Name);
                 return;
             }
-
             builder.Append(value);
         }        
     }
