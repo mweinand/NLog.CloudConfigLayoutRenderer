@@ -39,10 +39,12 @@ namespace NLog.WindowsAzure.Configuration
                 value = Default;
             }
 
-            if (string.IsNullOrEmpty(value) == false)
+            if (string.IsNullOrEmpty(value))
             {
-                builder.Append(value);
+                return;
             }
+
+            builder.Append(value);
         }        
     }
 }

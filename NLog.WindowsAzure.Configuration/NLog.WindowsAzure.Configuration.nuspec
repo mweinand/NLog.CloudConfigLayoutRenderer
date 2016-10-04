@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<title>$title$</title>
+		<authors>mweinand</authors>
+		<owners>mweinand</owners>
+		<licenseUrl>https://raw.githubusercontent.com/mweinand/NLog.WindowsAzure.Configuration/master/LICENSE.md</licenseUrl>
+		<projectUrl>https://github.com/mweinand/NLog.WindowsAzure.Configuration</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>An NLog Layout Renderer that utilizes Azure Cloud Configuration Manager</description>
+		<tags>nlog azure configuration cloud renderer</tags>
+	</metadata>
+</package>
